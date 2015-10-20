@@ -1,0 +1,1 @@
+parray=01,02,03,04,05,06&tarray=the uncertainty of geometry,a tacit agreement,man in machine, , ,will o the wisp

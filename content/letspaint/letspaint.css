@@ -1,0 +1,25 @@
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #555555;
+}
+
+td A {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #5555CC;
+}
+
+.footer {
+	font-size: 10px;
+	color: #999999;
+}
+.footer A {
+	font-size: 10px;
+	color: #999999;
+}
+
+.poem {
+	font-size: 13px;
+	font-style: italic;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Artzar Winamp3 Skin Customization</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#000000"> 
+    <td><a href="http://www.artzar.com/" target="_blank"><img src="artzar.gif" width="229" height="75" border="0"></a></td>
+    <td align="right"><a href="http://www.winamp.com" target="_blank"><img src="winamp3.jpg" width="229" height="75" border="0"></a></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr> 
+    <td colspan="2"><p><a href="index.html">Return to Skin Documentation</a></p>
+      <p><font size="+2" face="Arial, Helvetica, sans-serif"><strong>Artzar Winamp3 
+        Skin Customization</strong></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">Limitations in the Winamp 3 
+        scripting environment make it impossible to have an &quot;Add Your Own 
+        Pictures&quot; function included in the Artzar skin, mostly because maki 
+        scripts are not given any access to your computer's file system. If you 
+        really wish to add, remove, or replace the images in your copy of the 
+        Artzar skin, you can follow the step by step instructions below. </font></p>
+      <p><font face="Arial, Helvetica, sans-serif">Send any questions or error 
+        reports to <a href="mailto:winamp3@artzar.com">winamp3@artzar.com</a>.</font></p>
+      <p><font face="Arial, Helvetica, sans-serif"><strong>To add your own images:</strong></font></p></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">1</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Rename the skin file <tt>artzar.wal</tt> 
+      to <tt>artzar.zip</tt>, open the file in Winzip (or another file compression 
+      utlity) and unzip the contents into Winamp's skin directory. </font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">2</font></strong></td>
+    <td><p><font face="Arial, Helvetica, sans-serif">Rename the resulting <tt>Artzar</tt> 
+        skin folder to whatever name you wish to be listed in Winamp's skin menu. 
+        This is important so Winamp knows which vesion of the skin you want to 
+        be loaded, since it can still access the <tt>artzar.zip</tt> file version 
+        too.</font></p></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">3</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Open your new pictures in Photoshop 
+      (or other photo editing program), crop and resize them to 223x148 pixels, 
+      and save them in the <tt>graphics\player\art</tt> directory of your skin 
+      directory as PNG files (either 8 or 24-bit).</font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">4</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Open the file <tt>xml\player-art.xml</tt> 
+      file in a text editor (not in Internet Explorer or another plain xml viewer). 
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">5</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">In the <em>&lt;elements&gt;</em> 
+      section of the file, add bitmap tags that point to your new PNG files. Make 
+      sure you give them a unique id.</font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">6</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">In the <em>&lt;groupdef id=&quot;player.art.images&quot; 
+      name=&quot;Art Images&quot;&gt;</em> section add <em>&lt;layer&gt; </em> 
+      tags for your new images, where <em>image</em> is the id you gave your bitmap 
+      tag above, <em>id</em> is another unique identifier, and the <em>x</em>, 
+      <em>y</em>, and <em>alpha</em> are the same as the original layers.</font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">7</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">In the <em>&lt;groupdef id=&quot;player.art.titles&quot; 
+      name=&quot;Art Titles&quot;&gt;</em> add <em>&lt;text&gt;</em> elements 
+      to show the title of your image. The <em>id</em> attribute should have the 
+      same value as the <em>layer</em> tags you created in the last step, so that 
+      the skin knows what titles to show with what images. The order of the these 
+      <em>text </em> elements determine their order in the art popup menu.</font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">8</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Load or reload (F5) your skin 
+      in Winamp and your pictures should now be part of the slideshow and art 
+      popup menu. Enjoy!</font></td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top">
+<p><strong><font face="Arial, Helvetica, sans-serif">Optional 
+        steps to further customize the skin:</font></strong></p></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">1</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">In the <tt>xml\player-art.xml</tt> 
+      file you can remove the <em>bitmap</em>, <em>layer</em>, and <em>text</em> 
+      elements for an image to remove it from the skin. Feel free to delete all 
+      the artzar images and replace them with your own.</font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">2</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">To change the ARTZAR title that 
+      shows when the controls fade out , open <tt>xml\player-titles.xml</tt> and 
+      change the <em>default</em> attribute of the <em>player.title.artzar</em> 
+      <em>text</em> element to text of your choosing. </font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">3</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Use Photoshop (or other photo 
+      editor) to open <tt>graphics\player\background.png</tt>, <tt>graphics\player\buttons.png</tt>, 
+      and <tt>graphics\player\covers.png</tt>. Change all of the black areas and/or 
+      the grey bevels to colors of your choosing to change the look of the player 
+      border. (make sure you switch from Indexed to RGB color when you open these 
+      PNG images, and then back again before you re-save them)</font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">4</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Reload your skin for these changes 
+      to take affect.</font></td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top">
+<p>&nbsp;</p>
+      <p><font face="Arial, Helvetica, sans-serif"><strong>Redistribution of this 
+        skin:</strong></font></p>
+      <p><font face="Arial, Helvetica, sans-serif">If you wish to redistribute 
+        this skin with a slideshow of your own images, please feel free as long 
+        as all of the following steps are taken:</font></p></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">1</font></strong></td>
+    <td><p><font face="Arial, Helvetica, sans-serif">All copyrighted &quot;artwork&quot; 
+        must be removed from the skin. This includes deleting all of the images 
+        currently in the <tt>graphics\player\art</tt> directory and replacing 
+        the following skin graphics with your own images:</font></p>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif"><tt>graphics\eq\background.png</tt></font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><tt>graphics\frame\background.png</tt></font></li>
+        <li><font face="Arial, Helvetica, sans-serif"><tt>graphics\thinger\background.png</tt></font></li>
+        <li> <font face="Arial, Helvetica, sans-serif"><tt>graphics\thinger\foreground.png</tt></font></li>
+        <li><font face="Arial, Helvetica, sans-serif">screenshot.png</font></li>
+      </ul></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">2</font></strong></td>
+    <td><p><font face="Arial, Helvetica, sans-serif">The skin must not appear 
+        to be an &quot;Artzar&quot; skin. This means that:</font></p>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif">the skin file must be named 
+          something else</font></li>
+        <li><font face="Arial, Helvetica, sans-serif"> the player window title 
+          must be changed (see Optional Step 2 above)</font></li>
+        <li><font face="Arial, Helvetica, sans-serif">the <em>&lt;name&gt;</em> 
+          and other metadata must be changed in <tt>player.xml</tt></font></li>
+      </ul></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">3</font></strong></td>
+    <td><p><font face="Arial, Helvetica, sans-serif">The following functions must 
+        be changed in the maki scripts to point people to your website instead 
+        of Artzar, or modified to remove the visit and launch options if you don't 
+        have a website:</font></p>
+      <ul>
+        <li><font face="Arial, Helvetica, sans-serif">showMenu() and parseResults() 
+          functions in scripts\player-options.m </font></li>
+        <li><font face="Arial, Helvetica, sans-serif">launchGallery() in scripts\player-art.</font></li>
+      </ul></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">4</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">The included code in <tt>scripts\config.m</tt> 
+      must be changed to reflect your skin, and most importantly, a new PRIVATESECTION 
+      must be specified. </font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">5</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">After you make the above changes 
+      to the script files, you must recompile all of the scripts by running the 
+      file <tt>make.bat</tt></font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">6</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Include a <tt>readme.txt</tt> 
+      file in the root directory of the skin explaining that the original code 
+      was written by Mike McCaffrey, and provide a link to this page. All modifications 
+      that you make to the skin other than superficial image changes must be listed 
+      in this file also, so that people know who is responsible for what. </font></td>
+  </tr>
+  <tr> 
+    <td valign="top"><strong><font size="+3" face="Arial, Helvetica, sans-serif">7</font></strong></td>
+    <td><font face="Arial, Helvetica, sans-serif">Drop me a line at <a href="mailto:winamp3@artzar.com">winamp3@artzar.com</a> 
+      telling me what your plans for the skin are. Thanks!!</font></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Artzar - Paint Chips by Mike McCaffrey</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<style type="text/css">
+<!--
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+-->
+</style>
+</head>
+
+ <!-- This script creates the black frame if needed -->
+<script language="JavaScript" src="/frame/frame.js"></script>
+
+<script language="JavaScript">
+
+	var fileName = new Array;
+
+    fileName[0] = "DSCN5514_tiny_window";
+    fileName[1] = "DSCN5520_alley_star";
+    fileName[2] = "DSCN6156_private_chair";
+    fileName[3] = "DSCN6171_breaking_the_rules";
+    fileName[4] = "DSCN6178_Brass_knob";
+    fileName[5] = "DSCN6183_wicker_mattress";
+    fileName[6] = "DSCN6203_tattered";
+    fileName[7] = "DSCN6229_flair";
+    fileName[8] = "DSCN6241_playgrounds";
+    fileName[9] = "DSCN6266_barbed_wire_heart";
+    fileName[10] = "DSCN6270_escape_from_red";
+    fileName[11] = "DSCN6300_mattress_blues";
+    fileName[12] = "DSCN6302_l33t";
+    fileName[13] = "DSCN6305_white_dwarf";
+    fileName[14] = "DSCN6317_not_on";
+    fileName[15] = "DSCN6318_sand_pile";
+    fileName[16] = "DSCN6321_united_quaker_states";
+    fileName[17] = "DSCN6326_1201_1203";
+    fileName[18] = "DSCN6328_step_up";
+    fileName[19] = "DSCN6329_green_lid";
+    fileName[20] = "DSCN6336_three_step";
+    fileName[21] = "DSCN6340_stratify";
+    fileName[22] = "DSCN6341_carport";
+    fileName[23] = "DSCN6344_take_a_seat";
+    fileName[24] = "DSCN6350_tetris_storm";
+    fileName[25] = "DSCN6357_truck_stop";
+    fileName[26] = "DSCN6362_white_boards";
+    fileName[27] = "DSCN6371_wrong_number";
+    fileName[28] = "DSCN6379_number1";
+    fileName[29] = "DSCN6435_lc_gas";
+    fileName[30] = "DSCN6440_sandblast";
+    fileName[31] = "DSCN6444_sandblast_triangle";
+    fileName[32] = "DSCN6446_days_gone_by";
+    fileName[33] = "DSCN6451_two_pipe";
+    fileName[34] = "DSCN6454_red_brick_road";
+    fileName[35] = "DSCN6459_unlucky_dog";
+    fileName[36] = "DSCN6461_out_with_the_trash";
+    fileName[37] = "DSCN6464_borf_on_brown";
+    fileName[38] = "DSCN6466_aqua_amongst";
+    fileName[39] = "DSCN6476_yellow_pole";
+    fileName[40] = "DSCN6477_reserved_for_20";
+    fileName[41] = "DSCN6486_shades_of_red";
+    fileName[42] = "DSCN6503_respassin";
+    fileName[43] = "DSCN6508_black_zone";
+    fileName[44] = "DSCN6519_column_of_T";
+    fileName[45] = "DSCN6525_hot_air";
+    fileName[46] = "DSCN6546_section";
+    fileName[47] = "DSCN6583_diamond_tape";
+    fileName[48] = "DSCN6591_space_invader";
+    fileName[49] = "DSCN6592_blue_door";
+
+	var letterIndex = new Array;
+	
+	letterIndex[0] = "p";
+	letterIndex[1] = "a";
+	letterIndex[2] = "i";
+	letterIndex[3] = "n";
+	letterIndex[4] = "t";
+	letterIndex[5] = "c";
+	letterIndex[6] = "h";
+	letterIndex[7] = "i";
+	letterIndex[8] = "p";
+	letterIndex[9] = "s";
+	
+
+
+function loadImages() {
+
+	for (i = 0; i < 50; i++) document.getElementById("L"+i).src = "/content/paintchips/letters/"+fileName[i]+".png";
+
+}
+
+function showImage(inID) {
+
+	document.getElementById("L"+inID).src = "/content/paintchips/blanks/"+letterIndex[inID % 10]+".png";
+
+	document.getElementById("L"+inID).src = "/content/paintchips/thumbs/"+fileName[inID]+".png";
+	
+}
+
+function hideImage(inID) {
+
+	document.getElementById("L"+inID).src = "/content/paintchips/letters/"+fileName[inID]+".png";
+
+}
+
+function openImage(inID) {
+
+	window.open("/content/paintchips/images/"+fileName[inID]+".jpg");
+	
+}
+
+function randomBreaks() {
+
+	var n; 
+	
+	n = Math.round(Math.random() * 10); 
+	
+	for (i =0; i< n; i++) document.write("<br>");
+
+}
+
+
+</script>
+
+
+
+<body bgcolor="#999999" background="/content/paintchips/background.png" text="#CCCCCC" link="#666666" vlink="#666666" alink="#666666" onLoad=" loadImages() ">
+<br>
+<br>
+<table width="15000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P"	onClick="openImage(0)" id="L0" onMouseOver="showImage(0)" onMouseOut="hideImage(0)"  width="300" height="200"><p align="center">Photography</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/a.png" alt="A" 	onClick="openImage(1)" id="L1" onMouseOver="showImage(1)" onMouseOut="hideImage(1)"  width="300" height="200"><p align="center">of</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(2)" id="L2" onMouseOver="showImage(2)" onMouseOut="hideImage(2)"  width="300" height="200"><p align="center">Washington</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/n.png" alt="N" 	onClick="openImage(3)" id="L3" onMouseOver="showImage(3)" onMouseOut="hideImage(3)"  width="300" height="200"><p align="center">DC</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/t.png" alt="T" 	onClick="openImage(4)" id="L4" onMouseOver="showImage(4)" onMouseOut="hideImage(4)"  width="300" height="200"><p align="center">Taken</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/c.png" alt="C" 	onClick="openImage(5)" id="L5" onMouseOver="showImage(5)" onMouseOut="hideImage(5)"  width="300" height="200"><p align="center">from</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/h.png" alt="H" 	onClick="openImage(6)" id="L6" onMouseOver="showImage(6)" onMouseOut="hideImage(6)"  width="300" height="200"><p align="center">2004</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(7)" id="L7" onMouseOver="showImage(7)" onMouseOut="hideImage(7)"  width="300" height="200"><p align="center">to</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P" 	onClick="openImage(8)" id="L8" onMouseOver="showImage(8)" onMouseOut="hideImage(8)"  width="300" height="200">
+      <p align="center">2006</p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/s.png" alt="S" 	onClick="openImage(9)" id="L9" onMouseOver="showImage(9)" onMouseOut="hideImage(9)"  width="300" height="200"><p align="center">by</p></td>
+
+       <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P" onClick="openImage(10)" id="L10" onMouseOver="showImage(10)" onMouseOut="hideImage(10)"  width="300" height="200">
+      <p align="center"><a href="/contributors/mccaffrey.html" target="_top">Mike</a></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/a.png" alt="A" 	onClick="openImage(11)" id="L11" onMouseOver="showImage(11)" onMouseOut="hideImage(11)"  width="300" height="200">
+      <p align="center"><a href="/contributors/mccaffrey.html" target="_top">McCaffrey</a></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(12)" id="L12" onMouseOver="showImage(12)" onMouseOut="hideImage(12)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/n.png" alt="N" 	onClick="openImage(13)" id="L13" onMouseOver="showImage(13)" onMouseOut="hideImage(13)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/t.png" alt="T" 	onClick="openImage(14)" id="L14" onMouseOver="showImage(14)" onMouseOut="hideImage(14)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/c.png" alt="C" 	onClick="openImage(15)" id="L15" onMouseOver="showImage(15)" onMouseOut="hideImage(15)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/h.png" alt="H" 	onClick="openImage(16)" id="L16" onMouseOver="showImage(16)" onMouseOut="hideImage(16)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(17)" id="L17" onMouseOver="showImage(17)" onMouseOut="hideImage(17)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P"	onClick="openImage(18)" id="L18" onMouseOver="showImage(18)" onMouseOut="hideImage(18)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/s.png" alt="S" 	onClick="openImage(19)" id="L19" onMouseOver="showImage(19)" onMouseOut="hideImage(19)"  width="300" height="200"><p align="center"></p></td>
+	  
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P" onClick="openImage(20)" id="L20" onMouseOver="showImage(20)" onMouseOut="hideImage(20)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/a.png" alt="A" 	onClick="openImage(21)" id="L21" onMouseOver="showImage(21)" onMouseOut="hideImage(21)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(22)" id="L22" onMouseOver="showImage(22)" onMouseOut="hideImage(22)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/n.png" alt="N" 	onClick="openImage(23)" id="L23" onMouseOver="showImage(23)" onMouseOut="hideImage(23)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/t.png" alt="T" 	onClick="openImage(24)" id="L24" onMouseOver="showImage(24)" onMouseOut="hideImage(24)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/c.png" alt="C" 	onClick="openImage(25)" id="L25" onMouseOver="showImage(25)" onMouseOut="hideImage(25)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/h.png" alt="H" 	onClick="openImage(26)" id="L26" onMouseOver="showImage(26)" onMouseOut="hideImage(26)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(27)" id="L27" onMouseOver="showImage(27)" onMouseOut="hideImage(27)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P"	onClick="openImage(28)" id="L28" onMouseOver="showImage(28)" onMouseOut="hideImage(28)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/s.png" alt="S" 	onClick="openImage(29)" id="L29" onMouseOver="showImage(29)" onMouseOut="hideImage(29)"  width="300" height="200"><p align="center"></p></td>
+	  
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P" onClick="openImage(30)" id="L30" onMouseOver="showImage(30)" onMouseOut="hideImage(30)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/a.png" alt="A" 	onClick="openImage(31)" id="L31" onMouseOver="showImage(31)" onMouseOut="hideImage(31)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(32)" id="L32" onMouseOver="showImage(32)" onMouseOut="hideImage(32)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/n.png" alt="N" 	onClick="openImage(33)" id="L33" onMouseOver="showImage(33)" onMouseOut="hideImage(33)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/t.png" alt="T" 	onClick="openImage(34)" id="L34" onMouseOver="showImage(34)" onMouseOut="hideImage(34)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/c.png" alt="C" 	onClick="openImage(35)" id="L35" onMouseOver="showImage(35)" onMouseOut="hideImage(35)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/h.png" alt="H" 	onClick="openImage(36)" id="L36" onMouseOver="showImage(36)" onMouseOut="hideImage(36)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(37)" id="L37" onMouseOver="showImage(37)" onMouseOut="hideImage(37)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P"	onClick="openImage(38)" id="L38" onMouseOver="showImage(38)" onMouseOut="hideImage(38)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/s.png" alt="S" 	onClick="openImage(39)" id="L39" onMouseOver="showImage(39)" onMouseOut="hideImage(39)"  width="300" height="200"><p align="center"></p></td>
+	  
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P" onClick="openImage(40)" id="L40" onMouseOver="showImage(40)" onMouseOut="hideImage(40)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/a.png" alt="A" 	onClick="openImage(41)" id="L41" onMouseOver="showImage(41)" onMouseOut="hideImage(41)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(42)" id="L42" onMouseOver="showImage(42)" onMouseOut="hideImage(42)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/n.png" alt="N" 	onClick="openImage(43)" id="L43" onMouseOver="showImage(43)" onMouseOut="hideImage(43)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/t.png" alt="T" 	onClick="openImage(44)" id="L44" onMouseOver="showImage(44)" onMouseOut="hideImage(44)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/c.png" alt="C" 	onClick="openImage(45)" id="L45" onMouseOver="showImage(45)" onMouseOut="hideImage(45)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/h.png" alt="H" 	onClick="openImage(46)" id="L46" onMouseOver="showImage(46)" onMouseOut="hideImage(46)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/i.png" alt="I" 	onClick="openImage(47)" id="L47" onMouseOver="showImage(47)" onMouseOut="hideImage(47)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/p.png" alt="P"	onClick="openImage(48)" id="L48" onMouseOver="showImage(48)" onMouseOut="hideImage(48)"  width="300" height="200"><p align="center"></p></td>
+      <td width="300" valign="top"><script>randomBreaks();</script><img src="/content/paintchips/blanks/s.png" alt="S" 	onClick="openImage(49)" id="L49" onMouseOver="showImage(49)" onMouseOut="hideImage(49)"  width="300" height="200"><p align="center"></p></td>
+
+  </tr>
+</table>
+</body>
+</html>

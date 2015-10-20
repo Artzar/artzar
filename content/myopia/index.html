@@ -1,0 +1,284 @@
+<HTML>
+<HEAD>
+<TITLE>Artzar - MYOPIA by Mike McCaffrey</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+
+
+
+  var browser=  navigator.appName;
+  var version= navigator.appVersion;
+
+
+function showPic(inFile, inCol) {
+
+	if (browser == "Netscape" && version.indexOf('4.') >= 0) {
+		document.location= inFile;
+	}else {
+		document.images[0].src = inFile;
+		document.getElementById("myopia").style.visibility = "hidden";
+		document.getElementById("blur").style.visibility = "visible";
+		document.getElementById("pic").style.left = 182 + inCol*44;	
+		document.getElementById("pic").style.visibility = "visible";
+	}
+}
+
+function hidePic() {
+document.getElementById("pic").style.visibility = "hidden";
+document.getElementById("blur").style.visibility = "hidden";	
+document.getElementById("myopia").style.visibility = "visible";
+
+document.images[0].src = "/content/myopia/loading.gif";
+}
+
+
+
+//-->
+</script>
+<STYLE type="text/css">
+<!--
+.noU {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-decoration: none}
+-->
+</STYLE>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+ <!-- This script creates the black frame if needed -->
+<script language="JavaScript" src="/frame/frame.js"></script>
+
+<BODY bgcolor="#FFFFFF" text="#666666" link="666666" vlink="666666" alink="666666">
+
+<TABLE border=0 width="1600" height="100%" cellspacing=0 cellpadding=0 marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0">
+  <TR>
+    <TD valign="middle" align="left">
+
+<DIV id="pic" style="position:absolute; width:300px; height:350px; z-index:3; left: 490; visibility:hidden"><BR><A href="javascript:hidePic();"><IMG src="/content/myopia/loading.gif" width="300" height="300" border=1 name="thePic"></A><br><div align="right"><font size="-1" color="#CCCCCC">click on picture to close</font></div></DIV>
+ <SCRIPT language="JavaScript">
+
+	if(!((browser == "Netscape" && version.indexOf('4.') >= 0)||browser=="Opera"))
+	document.writeln('<DIV id="shadow" style="position:absolute; width:1100px; height:115px; z-index:0; left: 272;"><IMG src="/content/myopia/shadow.jpg" width="1172" height="298"></DIV>');
+
+</SCRIPT>
+      <DIV id="blur" style="position:absolute; width:1100px; height:115px; z-index:1; left: 272;visibility:hidden"><IMG src="/content/myopia/blur.jpg" width="1172" height="298"></DIV>
+
+<SCRIPT language="JavaScript">
+	// if the browser isn't netscape 4 use layers
+	if (!(browser == "Netscape" && version.indexOf('4.') >= 0)) 
+		document.writeln('<DIV id="myopia" style="position:relative; width:1100px;  z-index:2; left: 300">');
+
+
+</SCRIPT>
+    
+        <BR><BR>
+        <TABLE width="1100" border="0" cellpadding="0" cellspacing="2">
+        <TR height=42> 
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0745.jpg',0);"><IMG src="/content/myopia/small/DSCN0745.jpg" border="0" alt="Leafy Grey Lichen Next to Dark Grey and Rust Lichen"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN2157.jpg',4);"><IMG src="/content/myopia/small/DSCN2157.jpg" border="0" alt="Orange Butterfly on Pink Flower"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/burma_bug3.jpg',6);"><IMG src="/content/myopia/small/burma_bug3.jpg" border="0" alt="Captive Cockroach" width="40" height="40"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/grasshopper2.jpg',11);"><IMG src="/content/myopia/small/grasshopper2.jpg" border="0" alt="Green Grasshopper on Pencil Cactus"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0851.jpg',14);"><IMG src="/content/myopia/small/DSCN0851.jpg" border="0" alt="Leafy Lichen over Ash-like Lichen"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1143.jpg',18);"><IMG src="/content/myopia/small/DSCN1143.jpg" border="0" alt="Flying Bug on Vinyl Siding"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0844.jpg',20);"><IMG src="/content/myopia/small/DSCN0844.jpg" border="0" alt="Cyan Lichen"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN2040.jpg',23);"><IMG src="/content/myopia/small/DSCN2040.jpg" border="0" alt="Purple Flowers"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+          </TR>
+          <TR height=42> 
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN3346.jpg',1);"><IMG src="/content/myopia/small/DSCN3346.jpg" alt="Bee Resting on Red and Orange Flower" width="40" height="40" border="0"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0845.jpg',3);"><IMG src="/content/myopia/small/DSCN0845.jpg" border="0" alt="Grey Lichen on Redish Rock"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0922.jpg',8);"><IMG src="/content/myopia/small/DSCN0922.jpg" border="0" alt="Blue and Yellow Flower"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1343.jpg',12);"><IMG src="/content/myopia/small/DSCN1343.jpg" border="0" alt="Yellow Flower"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1738.jpg',16);"><IMG src="/content/myopia/small/DSCN1738.jpg" border="0" alt="Eye of the Frog"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN3715.jpg',19);"><IMG src="/content/myopia/small/DSCN3715.jpg" alt="Bone Jaw from Beach" width="40" height="40" border="0"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN3299.jpg',24);"><IMG src="/content/myopia/small/DSCN3299.jpg" border="0" alt="Grasshopper on Wooden Porch Steps"></A></TD>
+          </TR>
+          <TR height=42> 
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1483.jpg',0);"><IMG src="/content/myopia/small/DSCN1483.jpg" border="0" alt="Green Moss on Brown Pine Needles"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN2220.jpg',7);"><IMG src="/content/myopia/small/DSCN2220.jpg" border="0" alt="The Reflection in My Eye"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN2215.jpg',10);"><IMG src="/content/myopia/small/DSCN2215.jpg" border="0" alt="Inside of a Dandilion-Type Seed Stalk"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1499.jpg',14);"><IMG src="/content/myopia/small/DSCN1499.jpg" border="0" alt="Raindrops on Purple Flower"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1975.jpg',22);"><IMG src="/content/myopia/small/DSCN1975.jpg" border="0" alt="Robin Hachlings"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+          </TR>
+          <TR height=42> 
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><FONT color="#666666"><A href="/contributors/mccaffrey.html" target="_top" class="noU">b</A></FONT></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><FONT color="#666666"><A href="/contributors/mccaffrey.html" target="_top" class="noU">y</A></FONT></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0930.jpg',4);"><FONT color="#666666"><IMG src="/content/myopia/small/DSCN0930.jpg" border="0" alt="DSCN0930"></FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">M</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">i</FONT></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">k</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">e</FONT></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><FONT color="#666666"><A href="/contributors/mccaffrey.html" target="_top" class="noU">M</A></FONT></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0846.jpg',12);"><FONT color="#666666"><IMG src="/content/myopia/small/DSCN0846.jpg" border="0" alt="Various Textured Lichen on Redish Rock"></FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><FONT color="#666666"><A href="/contributors/mccaffrey.html" target="_top" class="noU">c</A></FONT></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">C</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">a</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">f</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">f</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN2054.jpg',19);"><FONT color="#666666"><IMG src="/content/myopia/small/DSCN2054.jpg" border="0" alt="Mass of Small White Flowers"></FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">r</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">e</FONT></A></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle"><A href="/contributors/mccaffrey.html" target="_top" class="noU"><FONT color="#666666">y</FONT></A></TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN3891.jpg',24);"><FONT color="#999999"><IMG src="/content/myopia/small/DSCN3891.jpg" alt="Leaf in Australia" width="40" height="40" border="0"></FONT></A></TD>
+          </TR>
+          <TR height=42> 
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN2039.jpg',0);"><IMG src="/content/myopia/small/DSCN2039.jpg" border="0" alt="Red Lilly"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/MVC-600L.jpg',7);"><IMG src="/content/myopia/small/MVC-600L.jpg" border="0" alt="Curled Centapede on My Palm"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1724.jpg',11);"><IMG src="/content/myopia/small/DSCN1724.jpg" border="0" alt="Snail on Wood"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN1148.jpg',14);"><IMG src="/content/myopia/small/DSCN1148.jpg" border="0" alt="Moth on my Finger"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><a href="javascript:showPic('/content/myopia/large/DSCN3875.jpg',18);"><img src="/content/myopia/small/DSCN3875.jpg" alt="Face of an Australian Bird" width="40" height="40" border="0"></a></TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999">&nbsp;</TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><A href="javascript:showPic('/content/myopia/large/DSCN0742.jpg',22);"><IMG src="/content/myopia/small/DSCN0742.jpg" border="0" alt="Tiny Purple Flowers"></A></TD>
+            <TD width=42 height=42 align="center" valign="middle">&nbsp;</TD>
+            
+          <TD width=42 height=42 align="center" valign="middle" bgcolor="#999999"><a href="javascript:showPic('/content/myopia/large/DSCN1132.jpg',24);"><img src="/content/myopia/small/DSCN1132.jpg" border="0" alt="Moth and Light and Shadow"></a></TD>
+          </TR>
+        </TABLE>
+</DIV>
+
+      <P>&nbsp;</P>
+      <P>&nbsp;</P>
+      <P>&nbsp; </P>
+
+    </TD>
+  </TR>
+  
+  <tr> 
+    <td align="right" valign="bottom"><font size="-2" face="Arial, Helvetica, sans-serif">&copy; 2003 <a href="http://www.artzar.com" target="_top">Artzar</a> 
+      - All Rights Reserved</font>&nbsp;</td>
+  </tr>
+  
+  </TABLE>
+
+
+</BODY>
+</HTML>

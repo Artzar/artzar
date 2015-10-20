@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+
+function MM_preloadImages() { //v3.0
+    var d=document; 
+    
+    if(d.images){ 
+    
+      if(!d.MM_p) d.MM_p=new Array();
+    
+      var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+    
+      for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ 
+      d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];
+      
+    }
+     }
+}
+-->
+</script>
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+var currX = 0;
+var currY = 0;
+var currZoom = 1;
+var currMaxZoom = 4;
+var currImage = "connections"
+var currRatio = "6:5";
+var currMinX = 0;
+var currMinY = 0;
+var currMaxX = 3;
+var currMaxY = 2.5;
+var currViewerSize = 3;
+
+function updateViewer() {
+
+  document.images.x0y0.src = 'graphics/loading.gif';
+  document.images.x1y0.src = 'graphics/loading.gif';
+  document.images.x2y0.src = 'graphics/loading.gif';
+  document.images.x0y1.src = 'graphics/loading.gif';
+  document.images.x1y1.src = 'graphics/loading.gif';
+  document.images.x2y1.src = 'graphics/loading.gif';
+  document.images.x0y2.src = 'graphics/loading.gif';
+  document.images.x1y2.src = 'graphics/loading.gif';
+  document.images.x2y2.src = 'graphics/loading.gif';
+
+  document.images.x0y0.src = currImage + '/x' + currZoom + '/' + pad(currX) + '/' + pad(currY) + '.gif';
+  document.images.x1y0.src = currImage + '/x' + currZoom + '/' + pad(currX+1) + '/' + pad(currY) + '.gif';
+  document.images.x2y0.src = currImage + '/x' + currZoom + '/' + pad(currX+2) + '/' + pad(currY) + '.gif';
+  
+  document.images.x0y1.src = currImage + '/x' + currZoom + '/' + pad(currX) + '/' + pad(currY+1) + '.gif';
+  document.images.x1y1.src = currImage + '/x' + currZoom + '/' + pad(currX+1) + '/' + pad(currY+1) + '.gif';
+  document.images.x2y1.src = currImage + '/x' + currZoom + '/' + pad(currX+2) + '/' + pad(currY+1) + '.gif';
+
+  document.images.x0y2.src = currImage + '/x' + currZoom + '/' + pad(currX) + '/' + pad(currY+2) + '.gif';
+  document.images.x1y2.src = currImage + '/x' + currZoom + '/' + pad(currX+1) + '/' + pad(currY+2) + '.gif';
+  document.images.x2y2.src = currImage + '/x' + currZoom + '/' + pad(currX+2) + '/' + pad(currY+2) + '.gif';
+
+}
+
+function gridClick(inX, inY) {
+
+zoomIn(inX, inY);
+
+}
+
+function zoomIn(inX, inY) {
+
+  if (currZoom == currMaxZoom) return;
+
+  currZoom = currZoom * 2;
+  currMinX = currMinX * 2;
+  currMinY = currMinY * 2;
+  currMaxX = currMaxX * 2;
+  currMaxY = currMaxY * 2;
+
+  currX = (currX * 2) + inX -1;
+  currY = (currY * 2) + inY -1;
+
+
+  ensureBounds();
+  updateViewer();
+
+}
+
+function zoomOut() {
+
+  if (currZoom == 1) return;
+
+  currZoom = currZoom / 2;
+  currMinX = currMinX / 2;
+  currMinY = currMinY / 2;
+  currMaxX = currMaxX / 2;
+  currMaxY = currMaxY / 2;
+ 
+  currX = Math.floor((currX - 1) / 2);
+  currY = Math.floor((currY - 1) / 2);
+
+  ensureBounds();
+  updateViewer();
+
+}
+
+function pan(inX, inY) {
+
+  currX += inX;
+  currY += inY;
+
+  ensureBounds();
+  updateViewer();
+}
+
+function ensureBounds() {
+
+  if (currX < Math.floor(currMinX)) currX = Math.floor(currMinX);
+  if (currY < Math.floor(currMinY)) currY = Math.floor(currMinY);
+  if (currX + currViewerSize > Math.ceil(currMaxX)) currX = Math.ceil(currMaxX) - currViewerSize;
+  if (currY + currViewerSize > Math.ceil(currMaxY)) currY = Math.ceil(currMaxY) - currViewerSize;
+
+}
+
+function moveBorderLayer() {
+
+xPos = getX("x0y0");
+yPos = getY("x0y0");
+
+document.getElementById("grid").style.left = xPos-1;
+document.getElementById("grid").style.top = yPos-1;
+
+document.getElementById("grid").style.visibility = "visible";
+
+updateViewer();
+}
+
+
+
+
+
+function getX(nvn) {
+var elm = document.images[nvn];
+if (document.layers) return elm;
+var pos = 0;
+do { pos += parseInt( elm.offsetLeft );
+elm = elm.offsetParent;
+} while ( elm );
+return pos;
+} 
+function getY ( nvn ) {
+var elm = document.images[nvn];
+if ( document.layers ) return elm;
+var pos = 0;
+do { pos += parseInt( elm.offsetTop );
+elm = elm.offsetParent;
+} while ( elm );
+return pos;
+} 
+
+function pad (inInt) {
+  var outString = ("" + inInt);
+  if (outString.length < 2) outString = "0" + outString;
+  return outString;
+}
+
+
+//-->
+</script>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body onLoad="moveBorderLayer(); MM_preloadImages('graphics/9x9over.gif')" onResize="moveBorderLayer()">
+<table width="490" height="340" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="150" valign="top"><table width="150" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="20">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><img src="/content/mariano2/graphics/subtitle.gif" width="150" height="102"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="center"><img src="/content/mariano2/graphics/zoom_in.gif" width="14" height="14" border="0" onClick="zoomIn(1,1)">
+            <strong><font color="#666666" face="Arial, Helvetica, sans-serif">&nbsp;Zoom</font></strong>&nbsp; 
+            <img src="/content/mariano2/graphics/zoom_out.gif" width="14" height="14" border="0" onClick="zoomOut()"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      
+    </td>
+    <td><table width="340" height="340" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center" valign="top"><img src="/content/mariano2/graphics/arrow_n.gif" width="26" height="18" onClick="pan(0,-1)"></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" valign="middle"><img src="/content/mariano2/graphics/arrow_w.gif" width="18" height="26" onClick="pan(-1,0)"></td>
+          <td width="300" height="300"><table width="300" height="300" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x0y0" width="100" height="100" border="0" id="x0y0" onClick="gridClick(0,0)"></td>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x1y0" width="100" height="100" border="0" id="x1y0" onClick="gridClick(2,0)"></td>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x2y0" width="100" height="100" border="0" id="x2y0" onClick="gridClick(4,0)"></td>
+              </tr>
+              <tr>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x0y1" width="100" height="100" border="0" id="x0y1" onClick="gridClick(0,2)"></td>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x1y1" width="100" height="100" border="0" id="x1y1" onClick="gridClick(2,2)"></td>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x2y1" width="100" height="100" border="0" id="x2y1" onClick="gridClick(4,2)"></td>
+              </tr>
+              <tr>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x0y2" width="100" height="100" border="0" id="x0y2" onClick="gridClick(0,4)"></td>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x1y2" width="100" height="100" border="0" id="x1y2" onClick="gridClick(2,4)"></td>
+                <td><img src="/content/mariano2/graphics/loading.gif" name="x2y2" width="100" height="100" border="0" id="x2y2" onClick="gridClick(4,4)"></td>
+              </tr>
+            </table></td>
+          <td align="right" valign="middle"><img src="/content/mariano2/graphics/arrow_e.gif" width="18" height="26" onClick="pan(1,0)"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center" valign="bottom"><img src="/content/mariano2/graphics/arrow_s.gif" width="26" height="18" onClick="pan(0,1)"></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<div id="grid" style="position:absolute; width:302px; height:302px; z-index:2; visibility: hidden; left: 0; top: 0;"><a onMouseOver="document.images['gridImage'].src='graphics/9x9over.gif';" onMouseOut="document.images['gridImage'].src='graphics/9x9hide.gif';"><img src="/content/mariano2/graphics/9x9hide.gif" width="302" height="302" border="0" usemap="#Map" id="gridImage" name="gridImage"></a></div>
+  <map name="Map">
+    <area shape="rect" coords="0,0,51,51" href="javascript:gridClick(0,0)">
+    <area shape="rect" coords="51,0,101,51" href="javascript:gridClick(1,0)">
+    <area shape="rect" coords="101,0,151,51" href="javascript:gridClick(2,0)">
+    <area shape="rect" coords="151,0,201,51" href="javascript:gridClick(3,0)">
+    <area shape="rect" coords="201,0,251,51" href="javascript:gridClick(4,0)">
+    <area shape="rect" coords="251,0,302,51" href="javascript:gridClick(5,0)">
+	
+    <area shape="rect" coords="0,51,51,101" href="javascript:gridClick(0,1)">
+    <area shape="rect" coords="51,51,101,101" href="javascript:gridClick(1,1)">
+    <area shape="rect" coords="101,51,151,101" href="javascript:gridClick(2,1)">
+    <area shape="rect" coords="151,51,201,101" href="javascript:gridClick(3,1)">
+    <area shape="rect" coords="201,51,251,101" href="javascript:gridClick(4,1)">
+    <area shape="rect" coords="251,51,302,101" href="javascript:gridClick(5,1)">
+	
+    <area shape="rect" coords="0,101,51,151" href="javascript:gridClick(0,2)">
+    <area shape="rect" coords="51,101,101,151" href="javascript:gridClick(1,2)">
+    <area shape="rect" coords="101,101,151,151" href="javascript:gridClick(2,2)">
+    <area shape="rect" coords="151,101,201,151" href="javascript:gridClick(3,2)">
+    <area shape="rect" coords="201,101,251,151" href="javascript:gridClick(4,2)">
+    <area shape="rect" coords="251,101,302,151" href="javascript:gridClick(5,2)">
+	
+    <area shape="rect" coords="0,151,51,201" href="javascript:gridClick(0,3)">
+    <area shape="rect" coords="51,151,101,201" href="javascript:gridClick(1,3)">
+    <area shape="rect" coords="101,151,151,201" href="javascript:gridClick(2,3)">
+    <area shape="rect" coords="151,151,201,201" href="javascript:gridClick(3,3)">
+    <area shape="rect" coords="201,151,251,201" href="javascript:gridClick(4,3)">
+    <area shape="rect" coords="251,151,302,201" href="javascript:gridClick(5,3)">
+	
+    <area shape="rect" coords="0,201,51,251" href="javascript:gridClick(0,4)">
+    <area shape="rect" coords="51,201,101,251" href="javascript:gridClick(1,4)">
+    <area shape="rect" coords="101,201,151,251" href="javascript:gridClick(2,4)">
+    <area shape="rect" coords="151,201,201,251" href="javascript:gridClick(3,4)">
+    <area shape="rect" coords="201,201,251,251" href="javascript:gridClick(4,4)">
+    <area shape="rect" coords="251,201,302,251" href="javascript:gridClick(5,4)">
+	
+    <area shape="rect" coords="0,251,51,302" href="javascript:gridClick(0,5)">
+    <area shape="rect" coords="51,251,101,302" href="javascript:gridClick(1,5)">
+    <area shape="rect" coords="101,251,151,302" href="javascript:gridClick(2,5)">
+    <area shape="rect" coords="151,251,201,302" href="javascript:gridClick(3,5)">
+    <area shape="rect" coords="201,251,251,302" href="javascript:gridClick(4,5)">
+    <area shape="rect" coords="251,251,302,302" href="javascript:gridClick(5,5)">
+	
+
+  </map>
+</body>
+</html>

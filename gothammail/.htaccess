@@ -1,0 +1,6 @@
+# Begin password protection #
+AuthName "Gotham Mail Archive"
+Require valid-user
+AuthUserFile /home/users/web/b2600/pow.katmac/.htpasswd
+AuthType basic
+# End password protection #

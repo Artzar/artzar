@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<TITLE>Artzar - Person, Place, or Thing - by Jeremy Hinsdale</TITLE>
+<script language="Javascript" type="text/javascript">
+<!--	
+// Flash Version Detector  v1.1.5
+// http://www.dithered.com/javascript/flash_detect/index.html
+// code by Chris Nott (chris@NOSPAMdithered.com - remove NOSPAM)
+// with VBscript code from Alastair Hamilton
+
+var flashVersion = 0;
+function getFlashVersion() {
+	var agent = navigator.userAgent.toLowerCase(); 
+	
+   // NS3 needs flashVersion to be a local variable
+   if (agent.indexOf("mozilla/3") != -1 && agent.indexOf("msie") == -1) {
+      flashVersion = 0;
+   }
+   
+	// NS3+, Opera3+, IE5+ Mac (support plugin array):  check for Flash plugin in plugin array
+	if (navigator.plugins != null && navigator.plugins.length > 0) {
+		var flashPlugin = navigator.plugins['Shockwave Flash'];
+		if (typeof flashPlugin == 'object') { 
+			if (flashPlugin.description.indexOf('7.') != -1) flashVersion = 7;
+			else if (flashPlugin.description.indexOf('6.') != -1) flashVersion = 6;
+			else if (flashPlugin.description.indexOf('5.') != -1) flashVersion = 5;
+			else if (flashPlugin.description.indexOf('4.') != -1) flashVersion = 4;
+			else if (flashPlugin.description.indexOf('3.') != -1) flashVersion = 3;
+		}
+	}
+
+	// IE4+ Win32:  attempt to create an ActiveX object using VBscript
+	else if (agent.indexOf("msie") != -1 && parseInt(navigator.appVersion) >= 4 && agent.indexOf("win")!=-1 && agent.indexOf("16bit")==-1) {
+	   document.write('<scr' + 'ipt language="VBscript"\> \n');
+		document.write('on error resume next \n');
+		document.write('dim obFlash \n');
+		document.write('set obFlash = CreateObject("ShockwaveFlash.ShockwaveFlash.7") \n');
+		document.write('if IsObject(obFlash) then \n');
+		document.write('flashVersion = 7 \n');
+		document.write('else set obFlash = CreateObject("ShockwaveFlash.ShockwaveFlash.6") end if \n');
+		document.write('if flashVersion < 7 and IsObject(obFlash) then \n');
+		document.write('flashVersion = 6 \n');
+		document.write('else set obFlash = CreateObject("ShockwaveFlash.ShockwaveFlash.5") end if \n');
+		document.write('if flashVersion < 6 and IsObject(obFlash) then \n');
+		document.write('flashVersion = 5 \n');
+		document.write('else set obFlash = CreateObject("ShockwaveFlash.ShockwaveFlash.4") end if \n');
+		document.write('if flashVersion < 5 and IsObject(obFlash) then \n');
+		document.write('flashVersion = 4 \n');
+		document.write('else set obFlash = CreateObject("ShockwaveFlash.ShockwaveFlash.3") end if \n');
+		document.write('if flashVersion < 4 and IsObject(obFlash) then \n');
+		document.write('flashVersion = 3 \n');
+		document.write('end if');
+		document.write('</scr' + 'ipt\> \n');
+  }
+		
+	// WebTV 2.5 supports flash 3
+	else if (agent.indexOf("webtv/2.5") != -1) flashVersion = 3;
+
+	// older WebTV supports flash 2
+	else if (agent.indexOf("webtv") != -1) flashVersion = 2;
+
+	// Can't detect in all other cases
+	else {
+		flashVersion = flashVersion_DONTKNOW;
+	}
+
+	return flashVersion;
+}
+
+flashVersion_DONTKNOW = -1;
+
+getFlashVersion();
+//-->
+</script>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<BODY bgcolor="#FFFFFF" text="#999999" link="#888888" vlink="#888888" alink="#888888">
+
+<table width="100%" height="98%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="100%" align="center" valign="middle" colspan="2">
+
+<script>
+if (flashVersion < 6) {	
+		document.write('<h3>Error: Flash Version 6 or above required to view this gallery.</h3><p>Download a new plugin from <a href="http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" target="_blank" title="Get Flash Player">Macromedia</a>.</p>');
+} else {
+	var startGal = 'person';
+	var searchString = document.location.search;
+	if (searchString != "") startGal = searchString.substring(1);
+	document.writeln('<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="410" HEIGHT="375" id="gallery" ALIGN="">');
+	document.writeln('<PARAM NAME=movie VALUE="/content/ppt/gallery.swf?which=' + startGal +'">');
+	document.writeln('<PARAM NAME=quality VALUE=high>');
+	document.writeln('<PARAM NAME=bgcolor VALUE=#FFFFFF>');
+	document.writeln('<EMBED src="/content/ppt/gallery.swf?which=' + startGal +'" quality=high bgcolor=#FFFFFF  WIDTH="410" HEIGHT="375" NAME="gallery" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>');
+	document.writeln('</OBJECT>');
+}
+</script>
+  </td>
+  <tr>
+  </tr>
+    <tr valign="bottom">  
+    <td><font size="-2" face="Arial, Helvetica, sans-serif">&nbsp;Photos and Gallery 
+      by <a href="/contributors/hinsdale.html" target="_top">Jeremy Hinsdale</a> 
+      - <a href="/content/ppt/index.html" target="_top">Title Page</a> Adapted 
+      by <a href="/contributors/mccaffrey.html" target="_top">Mike McCaffrey</a></font></td>
+	<td align="right"><font size="-2" face="Arial, Helvetica, sans-serif"> &copy; 2003
+      <a href="http://www.artzar.com" target="_top">Artzar</a> - All Rights Reserved&nbsp; </font></td>
+  </tr>
+</table>
+</BODY>
+</HTML>

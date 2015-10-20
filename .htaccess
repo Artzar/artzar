@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^mccaffry/(.*)$ http://www.cliche-source.net/mccaffry/artzar/$1
+
+Options +Indexes
+IndexOptions -FancyIndexing
